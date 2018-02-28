@@ -23,7 +23,7 @@ boundaryField
 {
     wing
     {
-        type            	twoDEldridgePitchDisplacement;
+        type            	twoDEldredgePitchDisplacement;
         axis            	(0 0 1);
         origin          	(0.14944506531 -0.01289078948 0.125);
 		pitch_amplitude		1.0;

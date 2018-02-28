@@ -46,7 +46,7 @@ namespace Foam
         Class twoDEldridgePitchDisplacementPointPatchVectorField Declaration
 \*---------------------------------------------------------------------------*/
 
-class twoDOscillatingDisplacementPointPatchVectorField
+class twoDEldredgePitchDisplacementPointPatchVectorField
 :
     public fixedValuePointPatchField<vector>
 {
@@ -74,14 +74,14 @@ public:
     // Constructors
 
         //- Construct from patch and internal field
-        twoDOscillatingDisplacementPointPatchVectorField
+        twoDEldredgePitchDisplacementPointPatchVectorField
         (
             const pointPatch&,
             const DimensionedField<vector, pointMesh>&
         );
 
         //- Construct from patch, internal field and dictionary
-        twoDOscillatingDisplacementPointPatchVectorField
+        twoDEldredgePitchDisplacementPointPatchVectorField
         (
             const pointPatch&,
             const DimensionedField<vector, pointMesh>&,
@@ -89,7 +89,7 @@ public:
         );
 
         //- Construct by mapping given patchField<vector> onto a new patch
-        twoDOscillatingDisplacementPointPatchVectorField
+        twoDEldredgePitchDisplacementPointPatchVectorField
         (
             const twoDOscillatingDisplacementPointPatchVectorField&,
             const pointPatch&,
@@ -110,7 +110,7 @@ public:
         }
 
         //- Construct as copy setting internal field reference
-        twoDOscillatingDisplacementPointPatchVectorField
+        twoDEldredgePitchDisplacementPointPatchVectorField
         (
             const twoDOscillatingDisplacementPointPatchVectorField&,
             const DimensionedField<vector, pointMesh>&

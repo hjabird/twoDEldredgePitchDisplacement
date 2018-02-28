@@ -1,4 +1,4 @@
-twoDEldridgePitchDisplacementPointPatchVectorField.C
+twoDEldredgePitchDisplacementPointPatchVectorField.C
 
 
 LIB = $(FOAM_LIBBIN)/libmy2DOF

@@ -23,7 +23,7 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "twoDOscillatingDisplacementPointPatchVectorField.H"
+#include "twoDEldredgePitchPointPatchVectorField.H"
 #include "pointPatchFields.H"
 #include "addToRunTimeSelectionTable.H"
 #include "Time.H"
@@ -36,8 +36,8 @@ namespace Foam
 
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 
-twoDOscillatingDisplacementPointPatchVectorField::
-twoDOscillatingDisplacementPointPatchVectorField
+twoDEldredgePitchDisplacementPointPatchVectorField::
+twoDEldredgePitchDisplacementPointPatchVectorField
 (
     const pointPatch& p,
     const DimensionedField<vector, pointMesh>& iF
@@ -55,8 +55,8 @@ twoDOscillatingDisplacementPointPatchVectorField
 {}
 
 
-twoDOscillatingDisplacementPointPatchVectorField::
-twoDOscillatingDisplacementPointPatchVectorField
+twoDEldredgePitchDisplacementPointPatchVectorField::
+twoDEldredgePitchDisplacementPointPatchVectorField
 (
     const pointPatch& p,
     const DimensionedField<vector, pointMesh>& iF,
@@ -88,8 +88,8 @@ twoDOscillatingDisplacementPointPatchVectorField
 }
 
 
-twoDOscillatingDisplacementPointPatchVectorField::
-twoDOscillatingDisplacementPointPatchVectorField
+twoDEldredgePitchDisplacementPointPatchVectorField::
+twoDEldredgePitchDisplacementPointPatchVectorField
 (
     const twoDOscillatingDisplacementPointPatchVectorField& ptf,
     const pointPatch& p,
@@ -109,8 +109,8 @@ twoDOscillatingDisplacementPointPatchVectorField
 {}
 
 
-twoDOscillatingDisplacementPointPatchVectorField::
-twoDOscillatingDisplacementPointPatchVectorField
+twoDEldredgePitchDisplacementPointPatchVectorField::
+twoDEldredgePitchDisplacementPointPatchVectorField
 (
     const twoDOscillatingDisplacementPointPatchVectorField& ptf,
     const DimensionedField<vector, pointMesh>& iF
@@ -130,7 +130,7 @@ twoDOscillatingDisplacementPointPatchVectorField
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 
-void twoDOscillatingDisplacementPointPatchVectorField::autoMap
+void twoDEldredgePitchDisplacementPointPatchVectorField::autoMap
 (
     const pointPatchFieldMapper& m
 )
@@ -141,7 +141,7 @@ void twoDOscillatingDisplacementPointPatchVectorField::autoMap
 }
 
 
-void twoDOscillatingDisplacementPointPatchVectorField::rmap
+void twoDEldredgePitchDisplacementPointPatchVectorField::rmap
 (
     const pointPatchField<vector>& ptf,
     const labelList& addr
@@ -156,7 +156,7 @@ void twoDOscillatingDisplacementPointPatchVectorField::rmap
 }
 
 
-void twoDOscillatingDisplacementPointPatchVectorField::updateCoeffs()
+void twoDEldredgePitchDisplacementPointPatchVectorField::updateCoeffs()
 {
     if (this->updated())
     {
@@ -192,7 +192,7 @@ void twoDOscillatingDisplacementPointPatchVectorField::updateCoeffs()
 }
 
 
-void twoDOscillatingDisplacementPointPatchVectorField::write
+void twoDEldredgePitchDisplacementPointPatchVectorField::write
 (
     Ostream& os
 ) const

@@ -2,7 +2,7 @@ OpenFOAM® and OpenCFD® are registered trademarks of OpenCFD Limited, the produ
 This offering is not approved or endorsed by OpenCFD Limited, the producer of the OpenFOAM software and owner of the OPENFOAM® and OpenCFD® trade marks.
 http://openfoam.org/
 
-Based on a smooth pitching motion function from Eldridge 2009.
+Based on a smooth pitching motion function from Eldredge 2009.
 
 In Julia the function looks like (copied from K Ramesh's UNSFlow):
 ```
