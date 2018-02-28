@@ -23,15 +23,14 @@ boundaryField
 {
     wing
     {
-        type            	twoDOscillatingDisplacement;
+        type            	twoDEldridgePitchDisplacement;
         axis            	(0 0 1);
         origin          	(0.14944506531 -0.01289078948 0.125);
-        mean_pitch_angle  	0;
-        pitch_amplitude     -0.10;
-        omega           	100;
-        value           	uniform (0 0 0);
-        heave_amplitude     (0 0.1 0);
-        pitch_phase_offset 	0.0;   
+		pitch_amplitude		1.0;
+		k_parameter			1.0;
+		a_parameter			0.5;
+		chord				1.0;
+		free_stream_velocity 1.0;
     }
 
     front
