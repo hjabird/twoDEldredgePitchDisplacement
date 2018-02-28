@@ -2,14 +2,20 @@ OpenFOAM® and OpenCFD® are registered trademarks of OpenCFD Limited, the produ
 This offering is not approved or endorsed by OpenCFD Limited, the producer of the OpenFOAM software and owner of the OPENFOAM® and OpenCFD® trade marks.
 http://openfoam.org/
 
-# twoDOscillatingDisplacement
-It is pointDisplacement BC for OpenFOAM which is based on oscillatingDisplacement and angularOscillatingDisplacement.
-Both could be found here:
+Based on a smooth pitching motion function from Eldridge 2009.
 
- https://github.com/OpenFOAM/OpenFOAM-2.3.x/tree/master/src/fvMotionSolver/pointPatchFields/derived
+In Julia the function looks like (copied from K Ramesh's UNSFlow):
+```
+immutable EldUpDef <: MotionDef
+    amp :: Float64  // Amplitude
+    K :: Float64    // pitch rate non-dimensional parameter
+    a :: Float64    // relation trasition speed
+end
 
-
-This BC condition based on discussion on CFD-online: http://www.cfd-online.com/Forums/openfoam-verification-validation/151540-mesh-motion-not-consistent.html#post544630
-
-Thanks for Mr. Pruthvi for his initiative for sharing this code and discussion, his code could be found here: https://github.com/pruthvi1991/solvers/tree/master/mesh_motion
-
+function (eld::EldUpDef)(t)
+    sm = pi*pi*eld.K/(2*(eld.amp)*(1 - eld.a))
+    t1 = c / U // Modified to consider time
+    t2 = t1 + ((eld.amp)/(2*eld.K)) * c / U
+    ((eld.K/sm)*log(cosh(sm*(t - t1))/cosh(sm*(t - t2))))+(eld.amp/2)
+end
+```
